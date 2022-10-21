@@ -42,7 +42,7 @@ end
 if ARGV[0] == "--metadata"
   get_metadata(url: ARGV[1])
 elsif ARGV[0] == "-h"
-  puts "Usage: ./fetch [URLS]   # download pages"
+  puts "Usage: ./fetch [URLS]   # download pages by URL format `https://example.com`"
   puts "--metadata              # get metadata of downloaded page"
 else
   ARGV.each do |arg|
