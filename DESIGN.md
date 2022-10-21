@@ -37,7 +37,7 @@
 ```sh
   root
     fetch.rb        # main file
-    data/           # folder of downlaoded file
+    data/           # folder of downloaded file
       html/
       metadata/
     Dockerfile
@@ -49,9 +49,8 @@
 
 I will make some aumption for clear the requirement of app
 
-- The input urls must have http or https prefix
-- "-metadata" must be the first argument and only show metadata of a url after it
-
+* The input urls must have http or https prefix
+* "--metadata" must be the first argument and only show metadata of a url after it
 
 * Use ruby ARGV for check argument pass into app (check --metadata argument)
 * Download page features:
@@ -61,15 +60,15 @@ I will make some aumption for clear the requirement of app
   * Save both html and metadata (Use html parser to count images and links)
 
 * Get metadata:
-  * Check if metadata existed -> print file content
+  * Check if metadata file existed -> print file content
   * If not => print "Metadata not found"
 
 ## Things not done
 
 * `Archive all assets as well as html so that you load the web page locally with all assets loading properly.`
   * Now this app only download 1 web page at input url, if subpages needed we have to check each link in pages, download subpage and change the link to local file
-  * Same as above, to get CSS/Image we ahve to download all by link and replace the path with local file path
+  * Same as above, to get CSS/Image we have to download all by link and replace the path with local file path
 * Add db for test (like a db for test and clear db after each test)
 * Optimization:
   * When download multi pages, the execution time maybe slow because we run sequentialy -> can use parallel to speed up the process
-  * The cons of this approach is if in argument input have duplicate url, 2 process may be write into same file at the same time => conflict
+  * The cons of this approach is if argument input have duplicate urls, 2 or more processes can write into same file at the same time => conflict. We can filter the input before running to deal with this case

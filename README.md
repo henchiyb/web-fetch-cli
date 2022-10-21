@@ -19,7 +19,6 @@ A CLI for downloading webpages and checking metadata
 
 1. Clone the repo
   `git clone https://github.com/henchiyb/web-fetch-cli.git`
-
 2. Move to this repo
   `cd web-fetch-cli`
 3. Build docker image
@@ -39,10 +38,9 @@ A CLI for downloading webpages and checking metadata
 ## Test (local)
 
 1. Install gem
-
 `bundle install --binstubs`
-2. Run rspec
 
+2. Run rspec
 `bin/rspec`
 
 ## Contact
