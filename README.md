@@ -36,5 +36,15 @@ A CLI for downloading webpages and checking metadata
 * Get metadata
 `docker run -v $(pwd)/:/app fetch --metadata https://google.com`
 
+## Test (local)
+
+1. Install gem
+
+`bundle install --binstubs`
+2. Run rspec
+
+`bin/rspec`
+
 ## Contact
+
 Project Link: [https://github.com/henchiyb/web-fetch-cli](https://github.com/henchiyb/web-fetch-cli)
