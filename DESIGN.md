@@ -2,20 +2,20 @@
 
 ## Requirement
 
-* [Requirement](https://autifyhq.notion.site/Backend-Engineer-Take-Home-Test-63032907b74341f8bd899018d685f03c)
 * Features:
   * Download page (HTML) for local use (can give multiple urls in argument of cli)
   * Check metada, include site name, num of images, nums of links and last fetch time.
-  * Get CSS/Picture (Optional)
+  * Get all asset (Optional)
 * Non-feature requirement
   * Use docker to build cli app
-  * Don't use UNIX call like wget, ...
+  * Don't use UNIX utilities like wget, ...
 
 ## Tools
 
 * Ruby version 3.0.3
 * [Faraday](https://lostisland.github.io/faraday/) library - request process
 * [Nokogiri](https://github.com/sparklemotion/nokogiri) - HTML parser
+* [RSpec](https://rspec.info/) - Unit test
 
 ## Feature Design
 
@@ -66,3 +66,10 @@ I will make some aumption for clear the requirement of app
 
 ## Things not done
 
+* `Archive all assets as well as html so that you load the web page locally with all assets loading properly.`
+  * Now this app only download 1 web page at input url, if subpages needed we have to check each link in pages, download subpage and change the link to local file
+  * Same as above, to get CSS/Image we ahve to download all by link and replace the path with local file path
+* Add db for test (like a db for test and clear db after each test)
+* Optimization:
+  * When download multi pages, the execution time maybe slow because we run sequentialy -> can use parallel to speed up the process
+  * The cons of this approach is if in argument input have duplicate url, 2 process may be write into same file at the same time => conflict
