@@ -49,6 +49,7 @@
 
 I will make some aumption for clear the requirement of app
 
+- The input urls must have http or https prefix
 - "-metadata" must be the first argument and only show metadata of a url after it
 
 
