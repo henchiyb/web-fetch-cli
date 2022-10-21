@@ -1,0 +1,24 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    faraday (2.6.0)
+      faraday-net_http (>= 2.0, < 3.1)
+      ruby2_keywords (>= 0.0.4)
+    faraday-net_http (3.0.1)
+    nokogiri (1.13.9-x86_64-darwin)
+      racc (~> 1.4)
+    racc (1.6.0)
+    ruby2_keywords (0.0.5)
+
+PLATFORMS
+  x86_64-darwin-20
+
+DEPENDENCIES
+  faraday
+  nokogiri
+
+RUBY VERSION
+   ruby 3.0.3p157
+
+BUNDLED WITH
+   2.2.33

@@ -14,8 +14,8 @@
 ## Tools
 
 * Ruby version 3.0.3
-* Faraday library - request process
-* Nokogiri - HTML parser
+* [Faraday](https://lostisland.github.io/faraday/) library - request process
+* [Nokogiri](https://github.com/sparklemotion/nokogiri) - HTML parser
 
 ## Feature Design
 
@@ -41,6 +41,8 @@
       html/
       metadata/
     Dockerfile
+    Gemfile
+    Gemfile.lock
 ```
 
 ### App deigsn
