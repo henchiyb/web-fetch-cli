@@ -35,12 +35,15 @@ def get_metadata(url:)
       puts "Metadata not found"
     end
   rescue => e
-    puts "Get metadata error."
+    puts "Get metadata error. Use `ruby fetch.rb -h` for help"
   end
 end
 
 if ARGV[0] == "--metadata"
   get_metadata(url: ARGV[1])
+elsif ARGV[0] == "-h"
+  puts "Usage: ./fetch [URLS]   # download pages"
+  puts "--metadata              # get metadata of downloaded page"
 else
   ARGV.each do |arg|
     download_page(url: arg)
