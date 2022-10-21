@@ -25,6 +25,7 @@ A CLI for downloading webpages and checking metadata
   `docker build . -f Dockerfile -t fetch`
 4. Run app
   `docker run -v $(pwd)/:/app fetch https://google.com https://bing.com`
+5. Check your html file in `data/html/` and metadata file in `data/metadata/`
 
 Or you can pull the image from [here](https://hub.docker.com/repository/docker/henchiyb/fetch) and run:
 

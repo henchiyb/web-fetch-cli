@@ -20,7 +20,7 @@ def download_page(url:)
     num_links = doc.css('a').size
     
     File.write("data/metadata/#{file_name}_metadata.txt", "Site: #{url}\nImages: #{num_images}\nLinks: #{num_links}\nLast fetch time: #{Time.now}")
-    puts "Download page success. URL: #{url}"
+    puts "Download page success\nURL: #{url}\nFile path: data/html/#{file_name}.html"
   rescue => e
     puts "Download page error. URL: #{url}"
   end
