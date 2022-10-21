@@ -24,14 +24,20 @@ A CLI for downloading webpages and checking metadata
 3. Build docker image
   `docker build . -f Dockerfile -t fetch`
 4. Run app
-  `docker run -v $(pwd)/:/app fetch https://exampl1.com https://example2.com ...`
+  `docker run -v $(pwd)/:/app fetch https://google.com https://bing.com`
+
+Or you can pull the image from [here](https://hub.docker.com/repository/docker/henchiyb/fetch) and run:
+
+`docker run -v $(pwd)/:/app henchiyb/fetch:1.0 https://google.com`
+
+`docker run -v $(pwd)/:/app henchiyb/fetch:1.0 --metadata https://google.com`
 
 ## Usage
 
 * Help
 `docker run -v $(pwd)/:/app fetch -h`
 * Fetch web pages
-`docker run -v $(pwd)/:/app fetch https://exampl1.com https://example2.com ...`
+`docker run -v $(pwd)/:/app fetch https://google.com https://bing.com`
 * Get metadata
 `docker run -v $(pwd)/:/app fetch --metadata https://google.com`
 
