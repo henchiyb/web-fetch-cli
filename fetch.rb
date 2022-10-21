@@ -26,6 +26,23 @@ def download_page(url:)
   end
 end
 
-ARGV.each do |arg|
-  download_page(url: arg)
+def get_metadata(url:)
+  begin
+    file_name = url.split('/').slice(2..-1).join('_')
+    if File.exists?("data/metadata/#{file_name}_metadata.txt")
+      puts File.read("data/metadata/#{file_name}_metadata.txt")
+    else
+      puts "Metadata not found"
+    end
+  rescue => e
+    puts "Get metadata error."
+  end
+end
+
+if ARGV[0] == "--metadata"
+  get_metadata(url: ARGV[1])
+else
+  ARGV.each do |arg|
+    download_page(url: arg)
+  end
 end
